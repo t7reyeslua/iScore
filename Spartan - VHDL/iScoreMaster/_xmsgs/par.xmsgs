@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Par" num="282" delta="unknown" >No user timing constraints were detected or you have set the option to ignore timing constraints (&quot;par -x&quot;). Place and Route will run in &quot;Performance Evaluation Mode&quot; to automatically improve the performance of all internal clocks in this design. The PAR timing summary will list the performance achieved for each clock. Note: For the fastest runtime, set the effort level to &quot;std&quot;.  For best performance, set the effort level to &quot;high&quot;. For a balance between the fastest runtime and best performance, set the effort level to &quot;med&quot;.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bEstadisticasIn&lt;0&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bEstadisticasIn&lt;1&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bEstadisticasIn&lt;2&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bEstadisticasIn&lt;3&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bEstadisticasIn&lt;4&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bEstadisticasIn&lt;5&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bEstadisticasIn&lt;6&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bEstadisticasIn&lt;7&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">i1_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bJugadoresIn&lt;0&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bJugadoresIn&lt;1&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bJugadoresIn&lt;2&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bJugadoresIn&lt;3&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bJugadoresIn&lt;4&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bJugadoresIn&lt;5&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bJugadoresIn&lt;6&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bJugadoresIn&lt;7&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bJugadoresIn&lt;8&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bJugadoresIn&lt;9&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bJugadoresIn&lt;10&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">bJugadoresIn&lt;11&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
+</msg>
+
+<msg type="info" file="Timing" num="3284" delta="unknown" >This timing report was generated using estimated delay information.  For accurate numbers, please refer to the post Place and Route timing report.</msg>
+
+<msg type="info" file="Timing" num="2761" delta="unknown" >N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no requested value.</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">contador&lt;13&gt;</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">puertoZB/stateRx&lt;13&gt;</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">1</arg> CLK pins and <arg fmt="%d" index="3">3</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">puertoPC/stateRx&lt;9&gt;</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">4</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">puertoZB/stateRx&lt;3&gt;</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">1</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">puertoPC/stateRx&lt;1&gt;</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">1</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">puertoZB/stateRx&lt;1&gt;</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">1</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">puertoPC/stateRx&lt;13&gt;</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">1</arg> CLK pins and <arg fmt="%d" index="3">5</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">clk25MHz/CLK1</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">5</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">puertoPC/stateRx&lt;3&gt;</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">puertoPC/stateRx&lt;7&gt;</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">puertoPC/stateRx&lt;5&gt;</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">puertoPC/stateRx&lt;11&gt;</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">puertoZB/wbufferTx_or0000</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">1</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">puertoPC/bufferReadyRx</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">1</arg> CLK pins and <arg fmt="%d" index="3">18</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">puertoZB/bufferReadyRx</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">1</arg> CLK pins and <arg fmt="%d" index="3">18</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="unknown" >CLK Net:<arg fmt="%s" index="1">disp/clk_cont&lt;8&gt;</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">4</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="info" file="Timing" num="3284" delta="unknown" >This timing report was generated using estimated delay information.  For accurate numbers, please refer to the post Place and Route timing report.</msg>
+
+<msg type="info" file="Timing" num="2761" delta="unknown" >N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no requested value.</msg>
+
+<msg type="warning" file="Par" num="283" delta="unknown" >There are <arg fmt="%d" index="1">21</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+</msg>
+
+<msg type="warning" file="ParHelpers" num="361" delta="unknown" >There are <arg fmt="%d" index="1">21</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+</msg>
+
+</messages>
+

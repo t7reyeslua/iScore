@@ -1,0 +1,7 @@
+# Output products list for <eFaltas>
+eFaltas.ngc
+eFaltas.vhd
+eFaltas.vho
+eFaltas.xco
+eFaltas_flist.txt
+eFaltas_xmdf.tcl

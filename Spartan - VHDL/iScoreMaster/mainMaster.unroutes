@@ -1,0 +1,33 @@
+Release 9.2.04i - par J.40
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Tue May 12 08:32:02 2009
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 21 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   bEstadisticasIn<0>_IBUF
+   bEstadisticasIn<1>_IBUF
+   bEstadisticasIn<2>_IBUF
+   bEstadisticasIn<3>_IBUF
+   bEstadisticasIn<4>_IBUF
+   bEstadisticasIn<5>_IBUF
+   bEstadisticasIn<6>_IBUF
+   bEstadisticasIn<7>_IBUF
+   bJugadoresIn<0>_IBUF
+   bJugadoresIn<10>_IBUF
+   bJugadoresIn<11>_IBUF
+   bJugadoresIn<1>_IBUF
+   bJugadoresIn<2>_IBUF
+   bJugadoresIn<3>_IBUF
+   bJugadoresIn<4>_IBUF
+   bJugadoresIn<5>_IBUF
+   bJugadoresIn<6>_IBUF
+   bJugadoresIn<7>_IBUF
+   bJugadoresIn<8>_IBUF
+   bJugadoresIn<9>_IBUF
+   i1_IBUF
+
+

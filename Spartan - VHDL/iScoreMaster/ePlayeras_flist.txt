@@ -1,0 +1,7 @@
+# Output products list for <ePlayeras>
+ePlayeras.ngc
+ePlayeras.vhd
+ePlayeras.vho
+ePlayeras.xco
+ePlayeras_flist.txt
+ePlayeras_xmdf.tcl

@@ -1,0 +1,7 @@
+# Output products list for <eRebotes>
+eRebotes.ngc
+eRebotes.vhd
+eRebotes.vho
+eRebotes.xco
+eRebotes_flist.txt
+eRebotes_xmdf.tcl

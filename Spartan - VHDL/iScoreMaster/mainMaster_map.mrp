@@ -1,0 +1,324 @@
+Release 9.2.04i Map J.40
+Xilinx Mapping Report File for Design 'mainMaster'
+
+Design Information
+------------------
+Command Line   : C:\Xilinx92i\bin\nt\map.exe -ise
+C:/Xilinx92i/iMasterBlock15/iMaster.ise -intstyle ise -p xc3s200-ft256-5 -cm
+area -pr b -k 4 -c 100 -o mainMaster_map.ncd mainMaster.ngd mainMaster.pcf 
+Target Device  : xc3s200
+Target Package : ft256
+Target Speed   : -5
+Mapper Version : spartan3 -- $Revision: 1.36 $
+Mapped Date    : Tue May 12 08:31:14 2009
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   32
+Logic Utilization:
+  Total Number Slice Registers:       546 out of   3,840   14%
+    Number used as Flip Flops:                   423
+    Number used as Latches:                      123
+  Number of 4 input LUTs:           1,224 out of   3,840   31%
+Logic Distribution:
+  Number of occupied Slices:                          845 out of   1,920   44%
+    Number of Slices containing only related logic:     845 out of     845  100%
+    Number of Slices containing unrelated logic:          0 out of     845    0%
+      *See NOTES below for an explanation of the effects of unrelated logic
+Total Number of 4 input LUTs:          1,440 out of   3,840   37%
+  Number used as logic:              1,224
+  Number used as a route-thru:         144
+  Number used as Shift registers:       72
+  Number of bonded IOBs:               66 out of     173   38%
+    IOB Flip Flops:                     5
+    IOB Latches:                        6
+  Number of Block RAMs:                7 out of      12   58%
+  Number of GCLKs:                     3 out of       8   37%
+
+Total equivalent gate count for design:  476,207
+Additional JTAG gate count for IOBs:  3,168
+Peak Memory Usage:  144 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   4 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:LIT:243 - Logical network i1_IBUF has no load.
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 20
+   more times for the following (max. 5 shown):
+   bEstadisticasIn<7>_IBUF,
+   bEstadisticasIn<6>_IBUF,
+   bEstadisticasIn<5>_IBUF,
+   bEstadisticasIn<4>_IBUF,
+   bEstadisticasIn<3>_IBUF
+   To see the details of these warning messages, please use the -detail switch.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net puertoPC/datoTx_or0000 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net puertoZB/datoTx_or0000 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   puertoPC/setNewValueRx_not0001 is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net puertoPC/wbufferTx_or0000
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net puertoZB/wbufferTx_or0000
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net OS_play is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net teclasOK is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   puertoZB/queElOtroMande_or0000 is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   puertoPC/queElOtroMande_or0000 is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:367 - The signal <bEstadisticasIn<0>_IBUF> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bEstadisticasIn<1>_IBUF> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bEstadisticasIn<2>_IBUF> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bEstadisticasIn<3>_IBUF> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bEstadisticasIn<4>_IBUF> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bEstadisticasIn<5>_IBUF> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bEstadisticasIn<6>_IBUF> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bEstadisticasIn<7>_IBUF> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <i1_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bJugadoresIn<0>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bJugadoresIn<1>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bJugadoresIn<2>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bJugadoresIn<3>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bJugadoresIn<4>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bJugadoresIn<5>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bJugadoresIn<6>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bJugadoresIn<7>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bJugadoresIn<8>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bJugadoresIn<9>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bJugadoresIn<10>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <bJugadoresIn<11>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:863 - The following Virtex BUFG(s) is/are being retargeted to
+   Virtex2 BUFGMUX(s) with input tied to I0 and Select pin tied to constant 0:
+   BUFGP symbol "CLK_BUFGP" (output signal=CLK_BUFGP),
+   BUFG symbol "puertoPC/esperate_or0000_BUFG" (output
+   signal=puertoPC/esperate_or0000),
+   BUFG symbol "puertoZB/esperate_or0000_BUFG" (output
+   signal=puertoZB/esperate_or0000)
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs in the
+   schematic.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  16 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		estadAsist/GND
+VCC 		estadAsist/VCC
+GND 		estadDobles/GND
+VCC 		estadDobles/VCC
+GND 		estadFaltas/GND
+VCC 		estadFaltas/VCC
+GND 		estadLibres/GND
+VCC 		estadLibres/VCC
+GND 		estadPlayers/GND
+VCC 		estadPlayers/VCC
+GND 		estadRebotes/GND
+VCC 		estadRebotes/VCC
+GND 		estadTriples/GND
+VCC 		estadTriples/VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type    | Direction | IO Standard | Drive    | Slew | Reg (s)  | Resistor | IOB   |
+|                                    |         |           |             | Strength | Rate |          |          | Delay |
++------------------------------------------------------------------------------------------------------------------------+
+| CLK                                | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| ENE<0>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ENE<1>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ENE<2>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ENE<3>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| bEquipo                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| bError                             | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bEstadisticasIn<0>                 | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bEstadisticasIn<1>                 | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bEstadisticasIn<2>                 | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bEstadisticasIn<3>                 | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bEstadisticasIn<4>                 | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bEstadisticasIn<5>                 | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bEstadisticasIn<6>                 | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bEstadisticasIn<7>                 | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bJugadoresIn<0>                    | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bJugadoresIn<1>                    | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bJugadoresIn<2>                    | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bJugadoresIn<3>                    | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bJugadoresIn<4>                    | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bJugadoresIn<5>                    | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bJugadoresIn<6>                    | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bJugadoresIn<7>                    | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bJugadoresIn<8>                    | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bJugadoresIn<9>                    | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bJugadoresIn<10>                   | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bJugadoresIn<11>                   | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| bReloj                             | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| boton1                             | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| boton2                             | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| boton3                             | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| boton4                             | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| i1                                 | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| i2                                 | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| i3                                 | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| iKB                                | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| iModo                              | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| iName                              | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| ioRxPC                             | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| ioRxZB                             | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| ioTxPC                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| ioTxZB                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| led1                               | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OLATCH1  |          |       |
+| led2                               | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OLATCH1  |          |       |
+| led3                               | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OLATCH1  |          |       |
+| led4                               | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OLATCH1  |          |       |
+| led5                               | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OLATCH1  |          |       |
+| led6                               | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OLATCH1  |          |       |
+| led7                               | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| led8                               | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| salBCD<0>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| salBCD<1>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| salBCD<2>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| salBCD<3>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| salBCD<4>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| salBCD<5>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| salBCD<6>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| salBCD<7>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| tecladoPIC<0>                      | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| tecladoPIC<1>                      | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| tecladoPIC<2>                      | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| tecladoPIC<3>                      | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| tecladoPIC<4>                      | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| tecladoPIC<5>                      | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| tecladoPIC<6>                      | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| tecladoPIC<7>                      | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
++------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+No control set information for this architecture.

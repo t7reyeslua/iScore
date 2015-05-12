@@ -1,0 +1,1696 @@
+Release 9.2.04i - xst J.40
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.25 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.25 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: mainMaster.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mainMaster.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mainMaster"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : mainMaster
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : mainMaster.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/kcuart_rx.vhd" in Library work.
+Architecture low_level_definition of Entity kcuart_rx is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/bbfifo_16x8.vhd" in Library work.
+Architecture low_level_definition of Entity bbfifo_16x8 is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/kcuart_tx.vhd" in Library work.
+Architecture low_level_definition of Entity kcuart_tx is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/uart_tx.vhd" in Library work.
+Architecture macro_level_definition of Entity uart_tx is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/uart_rx.vhd" in Library work.
+Architecture macro_level_definition of Entity uart_rx is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/CLKs.vhd" in Library work.
+Architecture behavioral of Entity clks is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/Display.vhd" in Library work.
+Architecture behavioral of Entity display is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/OneShot.vhd" in Library work.
+Architecture behavioral of Entity oneshot is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/FFT.vhd" in Library work.
+Architecture behavioral of Entity fft is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/RegistroPanel.vhd" in Library work.
+Architecture behavioral of Entity registropanel is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/Registro.vhd" in Library work.
+Architecture behavioral of Entity registro is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/eDobles.vhd" in Library work.
+Architecture edobles_a of Entity edobles is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/eLibres.vhd" in Library work.
+Architecture elibres_a of Entity elibres is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/eFaltas.vhd" in Library work.
+Architecture efaltas_a of Entity efaltas is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/eTriples.vhd" in Library work.
+Architecture etriples_a of Entity etriples is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/eRebotes.vhd" in Library work.
+Architecture erebotes_a of Entity erebotes is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/ePlayeras.vhd" in Library work.
+Architecture eplayeras_a of Entity eplayeras is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/eAsistencias.vhd" in Library work.
+Architecture easistencias_a of Entity easistencias is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/serialComm.vhd" in Library work.
+Architecture behavioral of Entity serialcomm is up to date.
+Compiling vhdl file "C:/Xilinx92i/iMasterBlock15/mainMaster.vhd" in Library work.
+Entity <mainmaster> compiled.
+Entity <mainmaster> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <mainMaster> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <CLKs> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Display> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <OneShot> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FFT> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RegistroPanel> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Registro> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <serialComm> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <uart_tx> in library <work> (architecture <macro_level_definition>).
+
+Analyzing hierarchy for entity <uart_rx> in library <work> (architecture <macro_level_definition>).
+
+Analyzing hierarchy for entity <kcuart_tx> in library <work> (architecture <low_level_definition>).
+
+Analyzing hierarchy for entity <bbfifo_16x8> in library <work> (architecture <low_level_definition>).
+
+Analyzing hierarchy for entity <kcuart_rx> in library <work> (architecture <low_level_definition>).
+
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/kcuart_tx.vhd" line 221: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/kcuart_tx.vhd" line 270: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/kcuart_tx.vhd" line 318: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/bbfifo_16x8.vhd" line 257: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/kcuart_rx.vhd" line 254: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/kcuart_tx.vhd" line 133: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/kcuart_tx.vhd" line 281: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/kcuart_tx.vhd" line 300: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/kcuart_tx.vhd" line 354: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/bbfifo_16x8.vhd" line 158: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/bbfifo_16x8.vhd" line 215: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/bbfifo_16x8.vhd" line 226: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/bbfifo_16x8.vhd" line 239: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/kcuart_rx.vhd" line 236: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Xilinx92i/iMasterBlock15/kcuart_tx.vhd" line 333: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <mainMaster> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Xilinx92i/iMasterBlock15/mainMaster.vhd" line 1086: Instantiating black box module <eDobles>.
+WARNING:Xst:2211 - "C:/Xilinx92i/iMasterBlock15/mainMaster.vhd" line 1087: Instantiating black box module <eLibres>.
+WARNING:Xst:2211 - "C:/Xilinx92i/iMasterBlock15/mainMaster.vhd" line 1088: Instantiating black box module <eFaltas>.
+WARNING:Xst:2211 - "C:/Xilinx92i/iMasterBlock15/mainMaster.vhd" line 1089: Instantiating black box module <eTriples>.
+WARNING:Xst:2211 - "C:/Xilinx92i/iMasterBlock15/mainMaster.vhd" line 1090: Instantiating black box module <eRebotes>.
+WARNING:Xst:2211 - "C:/Xilinx92i/iMasterBlock15/mainMaster.vhd" line 1091: Instantiating black box module <ePlayeras>.
+WARNING:Xst:2211 - "C:/Xilinx92i/iMasterBlock15/mainMaster.vhd" line 1092: Instantiating black box module <eAsistencias>.
+Entity <mainMaster> analyzed. Unit <mainMaster> generated.
+
+Analyzing Entity <CLKs> in library <work> (Architecture <behavioral>).
+Entity <CLKs> analyzed. Unit <CLKs> generated.
+
+Analyzing Entity <Display> in library <work> (Architecture <behavioral>).
+Entity <Display> analyzed. Unit <Display> generated.
+
+Analyzing Entity <OneShot> in library <work> (Architecture <behavioral>).
+Entity <OneShot> analyzed. Unit <OneShot> generated.
+
+Analyzing Entity <FFT> in library <work> (Architecture <behavioral>).
+Entity <FFT> analyzed. Unit <FFT> generated.
+
+Analyzing Entity <RegistroPanel> in library <work> (Architecture <behavioral>).
+Entity <RegistroPanel> analyzed. Unit <RegistroPanel> generated.
+
+Analyzing Entity <Registro> in library <work> (Architecture <behavioral>).
+Entity <Registro> analyzed. Unit <Registro> generated.
+
+Analyzing Entity <serialComm> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Xilinx92i/iMasterBlock15/serialComm.vhd" line 275: The following signals are missing in the process sensitivity list:
+   esperate.
+INFO:Xst:2679 - Register <resetbufferRx> in unit <serialComm> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <serialComm> analyzed. Unit <serialComm> generated.
+
+Analyzing Entity <uart_tx> in library <work> (Architecture <macro_level_definition>).
+Entity <uart_tx> analyzed. Unit <uart_tx> generated.
+
+Analyzing Entity <kcuart_tx> in library <work> (Architecture <low_level_definition>).
+    Set user-defined property "INIT =  E4FF" for instance <mux1_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  E4FF" for instance <mux2_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  E4FF" for instance <mux3_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  E4FF" for instance <mux4_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0" for instance <pipeline_serial> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0" for instance <count_width_loop[0].register_bit> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  8" for instance <count_width_loop[0].count_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0" for instance <count_width_loop[1].register_bit> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  8" for instance <count_width_loop[1].count_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0" for instance <count_width_loop[2].register_bit> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  8" for instance <count_width_loop[2].count_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  10" for instance <ready_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0190" for instance <start_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0" for instance <Tx_start_reg> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  1540" for instance <run_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0" for instance <Tx_run_reg> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  94" for instance <hot_state_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0" for instance <hot_state_reg> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0000" for instance <delay14_srl> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0" for instance <Tx_bit_reg> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0180" for instance <stop_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0" for instance <Tx_stop_reg> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  8" for instance <complete_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0" for instance <Tx_complete_reg> in unit <kcuart_tx>.
+Entity <kcuart_tx> analyzed. Unit <kcuart_tx> generated.
+
+Analyzing Entity <bbfifo_16x8> in library <work> (Architecture <low_level_definition>).
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[0].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[1].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[2].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[3].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[4].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[5].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[6].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[7].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0" for instance <count_width_loop[0].register_bit> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  6606" for instance <count_width_loop[0].count_lut> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0" for instance <count_width_loop[1].register_bit> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  6606" for instance <count_width_loop[1].count_lut> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0" for instance <count_width_loop[2].register_bit> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  6606" for instance <count_width_loop[2].count_lut> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0" for instance <count_width_loop[3].register_bit> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  6606" for instance <count_width_loop[3].count_lut> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0001" for instance <zero_lut> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  8000" for instance <full_lut> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  BFA0" for instance <dp_lut> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0" for instance <dp_flop> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  C4" for instance <valid_lut> in unit <bbfifo_16x8>.
+Entity <bbfifo_16x8> analyzed. Unit <bbfifo_16x8> generated.
+
+Analyzing Entity <uart_rx> in library <work> (Architecture <macro_level_definition>).
+Entity <uart_rx> analyzed. Unit <uart_rx> generated.
+
+Analyzing Entity <kcuart_rx> in library <work> (Architecture <low_level_definition>).
+    Set user-defined property "INIT =  0" for instance <sync_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <stop_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[0].lsbs.delay15_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[0].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[1].lsbs.delay15_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[1].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[2].lsbs.delay15_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[2].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[3].lsbs.delay15_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[3].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[4].lsbs.delay15_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[4].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[5].lsbs.delay15_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[5].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[6].lsbs.delay15_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[6].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[7].msb.delay15_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[7].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <start_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <start_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <edge_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <edge_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0040" for instance <valid_lut> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  54" for instance <purge_lut> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <purge_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[0].lsb.delay15_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[0].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[1].msbs.delay16_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[1].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[2].msbs.delay16_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[2].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[3].msbs.delay16_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[3].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[4].msbs.delay16_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[4].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[5].msbs.delay16_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[5].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[6].msbs.delay16_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[6].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[7].msbs.delay16_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[7].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[8].msbs.delay16_srl> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[8].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  8" for instance <strobe_lut> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0" for instance <strobe_reg> in unit <kcuart_rx>.
+Entity <kcuart_rx> analyzed. Unit <kcuart_rx> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <CLKs>.
+    Related source file is "C:/Xilinx92i/iMasterBlock15/CLKs.vhd".
+WARNING:Xst:1780 - Signal <cont> is never used or assigned.
+    Found 1-bit register for signal <CLK1>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <CLKs> synthesized.
+
+
+Synthesizing Unit <Display>.
+    Related source file is "C:/Xilinx92i/iMasterBlock15/Display.vhd".
+    Found 16x7-bit ROM for signal <Dmix$rom0000>.
+    Found 29-bit up counter for signal <clk_cont>.
+    Found 4-bit comparator less for signal <D7_7$cmp_lt0000> created at line 114.
+    Found 4-bit register for signal <pstate>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <Display> synthesized.
+
+
+Synthesizing Unit <OneShot>.
+    Related source file is "C:/Xilinx92i/iMasterBlock15/OneShot.vhd".
+    Found 1-bit register for signal <Q1>.
+    Found 1-bit register for signal <Q2>.
+    Found 1-bit register for signal <Q3>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <OneShot> synthesized.
+
+
+Synthesizing Unit <FFT>.
+    Related source file is "C:/Xilinx92i/iMasterBlock15/FFT.vhd".
+    Found 1-bit register for signal <t>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <FFT> synthesized.
+
+
+Synthesizing Unit <RegistroPanel>.
+    Related source file is "C:/Xilinx92i/iMasterBlock15/RegistroPanel.vhd".
+WARNING:Xst:647 - Input <teclasOK> is never used.
+    Found 11-bit register for signal <R>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <RegistroPanel> synthesized.
+
+
+Synthesizing Unit <Registro>.
+    Related source file is "C:/Xilinx92i/iMasterBlock15/Registro.vhd".
+    Found 12-bit register for signal <R>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <Registro> synthesized.
+
+
+Synthesizing Unit <kcuart_tx>.
+    Related source file is "C:/Xilinx92i/iMasterBlock15/kcuart_tx.vhd".
+Unit <kcuart_tx> synthesized.
+
+
+Synthesizing Unit <bbfifo_16x8>.
+    Related source file is "C:/Xilinx92i/iMasterBlock15/bbfifo_16x8.vhd".
+Unit <bbfifo_16x8> synthesized.
+
+
+Synthesizing Unit <kcuart_rx>.
+    Related source file is "C:/Xilinx92i/iMasterBlock15/kcuart_rx.vhd".
+Unit <kcuart_rx> synthesized.
+
+
+Synthesizing Unit <uart_tx>.
+    Related source file is "C:/Xilinx92i/iMasterBlock15/uart_tx.vhd".
+Unit <uart_tx> synthesized.
+
+
+Synthesizing Unit <uart_rx>.
+    Related source file is "C:/Xilinx92i/iMasterBlock15/uart_rx.vhd".
+Unit <uart_rx> synthesized.
+
+
+Synthesizing Unit <serialComm>.
+    Related source file is "C:/Xilinx92i/iMasterBlock15/serialComm.vhd".
+WARNING:Xst:646 - Signal <datoAARx> is assigned but never used.
+WARNING:Xst:653 - Signal <datoAATx> is used but never assigned. Tied to value 10101010.
+WARNING:Xst:1780 - Signal <sendAux> is never used or assigned.
+WARNING:Xst:646 - Signal <bufferHFRx> is assigned but never used.
+WARNING:Xst:653 - Signal <resetbufferTx> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <bufferHFTx> is assigned but never used.
+WARNING:Xst:646 - Signal <bufferFRx> is assigned but never used.
+WARNING:Xst:646 - Signal <bufferFTx> is assigned but never used.
+WARNING:Xst:646 - Signal <dato55Rx> is assigned but never used.
+WARNING:Xst:653 - Signal <dato55Tx> is used but never assigned. Tied to value 01010101.
+    Found finite state machine <FSM_0> for signal <stateTx>.
+    -----------------------------------------------------------------------
+    | States             | 16                                             |
+    | Transitions        | 24                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 14                                             |
+    | Clock              | CLK (rising_edge)                              |
+    | Power Up State     | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 1-bit latch for signal <ledprueba1>.
+WARNING:Xst:737 - Found 1-bit latch for signal <ledprueba2>.
+WARNING:Xst:737 - Found 1-bit latch for signal <ledprueba3>.
+WARNING:Xst:737 - Found 8-bit latch for signal <datoC1Rx>.
+WARNING:Xst:737 - Found 8-bit latch for signal <datoC2Rx>.
+WARNING:Xst:737 - Found 8-bit latch for signal <datoC3Rx>.
+WARNING:Xst:737 - Found 8-bit latch for signal <datoC4Rx>.
+WARNING:Xst:737 - Found 8-bit latch for signal <datoIdRx>.
+    Using one-hot encoding for signal <stateRx>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <stateRx> of Case statement line 155 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <stateRx> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <stateRx> of Case statement line 155 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <stateRx> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst:737 - Found 1-bit latch for signal <queElOtroMande>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 30-bit latch for signal <esperate>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 8-bit latch for signal <datoTx>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <wbufferTx>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <setNewValueRx>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <rbufferRx$mux0001>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 10-bit up counter for signal <baud_count>.
+    Found 1-bit register for signal <en_16_x_baud>.
+    Found 30-bit adder for signal <esperate$addsub0000>.
+    Found 14-bit register for signal <stateRx>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  15 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <serialComm> synthesized.
+
+
+Synthesizing Unit <mainMaster>.
+    Related source file is "C:/Xilinx92i/iMasterBlock15/mainMaster.vhd".
+WARNING:Xst:647 - Input <i1> is never used.
+WARNING:Xst:647 - Input <bEstadisticasIn> is never used.
+WARNING:Xst:647 - Input <bJugadoresIn> is never used.
+WARNING:Xst:646 - Signal <datoC2RxZB> is assigned but never used.
+WARNING:Xst:646 - Signal <r24Seg> is assigned but never used.
+WARNING:Xst:646 - Signal <datoIdRxZB> is assigned but never used.
+WARNING:Xst:646 - Signal <algunBoton> is assigned but never used.
+WARNING:Xst:646 - Signal <datoC4RxZB> is assigned but never used.
+WARNING:Xst:646 - Signal <setNewValueRxZB> is assigned but never used.
+WARNING:Xst:1780 - Signal <r24SegSTATUS> is never used or assigned.
+WARNING:Xst:646 - Signal <datoC1RxZB> is assigned but never used.
+WARNING:Xst:646 - Signal <rCuartoMin> is assigned but never used.
+WARNING:Xst:646 - Signal <rNumCuarto> is assigned but never used.
+WARNING:Xst:646 - Signal <datoC3RxZB> is assigned but never used.
+WARNING:Xst:653 - Signal <sendAlgoPC> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <OS_error> is never used or assigned.
+WARNING:Xst:646 - Signal <jugador> is assigned but never used.
+WARNING:Xst:1780 - Signal <bpanelAux> is never used or assigned.
+WARNING:Xst:1780 - Signal <rCuartoSTATUS> is never used or assigned.
+WARNING:Xst:653 - Signal <sendAlgoZB> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <rCuartoCen> is assigned but never used.
+WARNING:Xst:1780 - Signal <teclasValidas> is never used or assigned.
+WARNING:Xst:646 - Signal <rCuartoSeg> is assigned but never used.
+    Found finite state machine <FSM_1> for signal <anuncio>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 3                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Clock enable       | anuncio$not0000 (positive)                     |
+    | Power Up State     | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+    Found 8-bit adder for signal <$add0000> created at line 715.
+    Found 8-bit adder for signal <$add0001> created at line 756.
+    Found 8-bit adder for signal <$add0002> created at line 797.
+    Found 8-bit adder for signal <$add0003> created at line 838.
+    Found 8-bit adder for signal <$add0004> created at line 879.
+    Found 8-bit adder for signal <$add0005> created at line 920.
+    Found 8-bit subtractor for signal <$sub0000> created at line 729.
+    Found 8-bit subtractor for signal <$sub0001> created at line 770.
+    Found 8-bit subtractor for signal <$sub0002> created at line 811.
+    Found 8-bit subtractor for signal <$sub0003> created at line 852.
+    Found 8-bit subtractor for signal <$sub0004> created at line 893.
+    Found 8-bit subtractor for signal <$sub0005> created at line 934.
+    Found 5-bit register for signal <addrAsist>.
+    Found 5-bit register for signal <addrDobles>.
+    Found 5-bit register for signal <addrFaltas>.
+    Found 5-bit register for signal <addrLibres>.
+    Found 5-bit adder for signal <addrLibres$add0000> created at line 711.
+    Found 5-bit register for signal <addrPlayeras>.
+    Found 5-bit register for signal <addrRebotes>.
+    Found 5-bit adder for signal <addrRebotes$add0000> created at line 593.
+    Found 5-bit register for signal <addrTriples>.
+    Found 1-bit register for signal <algoPUSHED3>.
+    Found 1-bit xor2 for signal <algoPUSHED3$xor0000> created at line 434.
+    Found 13-bit comparator greater for signal <algunBotonJugadores$cmp_gt0000> created at line 489.
+    Found 12-bit comparator greater for signal <algunBotonPanel$cmp_gt0000> created at line 488.
+    Found 8-bit up counter for signal <atiempofuera>.
+    Found 1-bit register for signal <aux1>.
+    Found 1-bit register for signal <aux2>.
+    Found 8-bit up counter for signal <btiempofuera>.
+    Found 26-bit up counter for signal <contador>.
+    Found 25-bit register for signal <contestaPC>.
+    Found 25-bit adder for signal <contestaPC$addsub0000> created at line 515.
+    Found 25-bit comparator lessequal for signal <contestaPC$cmp_le0000> created at line 511.
+    Found 1-bit register for signal <contestaZB>.
+    Found 8-bit register for signal <datoC1TxPC>.
+    Found 8-bit register for signal <datoC1TxZB>.
+    Found 8-bit register for signal <datoC2TxPC>.
+    Found 8-bit register for signal <datoC2TxZB>.
+    Found 8-bit register for signal <datoC3TxPC>.
+    Found 8-bit register for signal <datoC3TxZB>.
+    Found 8-bit register for signal <datoC4TxZB>.
+    Found 8-bit adder for signal <datoC4TxZB$add0000> created at line 1015.
+    Found 8-bit adder for signal <datoC4TxZB$add0001> created at line 1019.
+    Found 8-bit comparator greater for signal <datoC4TxZB_0$cmp_gt0000> created at line 728.
+    Found 8-bit comparator greater for signal <datoC4TxZB_0$cmp_gt0001> created at line 769.
+    Found 8-bit comparator greater for signal <datoC4TxZB_0$cmp_gt0002> created at line 810.
+    Found 8-bit comparator greater for signal <datoC4TxZB_0$cmp_gt0003> created at line 851.
+    Found 8-bit comparator greater for signal <datoC4TxZB_0$cmp_gt0004> created at line 892.
+    Found 8-bit comparator greater for signal <datoC4TxZB_0$cmp_gt0005> created at line 933.
+    Found 8-bit comparator less for signal <datoC4TxZB_0$cmp_lt0000> created at line 728.
+    Found 8-bit comparator less for signal <datoC4TxZB_0$cmp_lt0001> created at line 769.
+    Found 8-bit comparator less for signal <datoC4TxZB_0$cmp_lt0002> created at line 810.
+    Found 8-bit comparator less for signal <datoC4TxZB_0$cmp_lt0003> created at line 851.
+    Found 8-bit comparator less for signal <datoC4TxZB_0$cmp_lt0004> created at line 892.
+    Found 8-bit comparator less for signal <datoC4TxZB_0$cmp_lt0005> created at line 933.
+    Found 8-bit register for signal <datoIdTxPC>.
+    Found 8-bit register for signal <datoIdTxZB>.
+    Found 8-bit register for signal <dinAsist>.
+    Found 8-bit comparator greatequal for signal <dinAsist_0$cmp_ge0000> created at line 851.
+    Found 4-bit comparator greater for signal <dinAsist_0$cmp_gt0000> created at line 839.
+    Found 8-bit comparator lessequal for signal <dinAsist_0$cmp_le0000> created at line 851.
+    Found 4-bit adder for signal <dinAsist_7_4$add0000> created at line 841.
+    Found 8-bit register for signal <dinDobles>.
+    Found 8-bit comparator greatequal for signal <dinDobles_1$cmp_ge0000> created at line 769.
+    Found 4-bit comparator greater for signal <dinDobles_1$cmp_gt0000> created at line 757.
+    Found 8-bit comparator lessequal for signal <dinDobles_1$cmp_le0000> created at line 769.
+    Found 4-bit adder for signal <dinDobles_7_4$add0000> created at line 759.
+    Found 8-bit register for signal <dinFaltas>.
+    Found 8-bit comparator greatequal for signal <dinFaltas_1$cmp_ge0000> created at line 933.
+    Found 4-bit comparator greater for signal <dinFaltas_1$cmp_gt0000> created at line 921.
+    Found 8-bit comparator lessequal for signal <dinFaltas_1$cmp_le0000> created at line 933.
+    Found 4-bit adder for signal <dinFaltas_7_4$add0000> created at line 923.
+    Found 8-bit register for signal <dinLibres>.
+    Found 8-bit comparator greatequal for signal <dinLibres_0$cmp_ge0000> created at line 728.
+    Found 4-bit comparator greater for signal <dinLibres_0$cmp_gt0000> created at line 716.
+    Found 8-bit comparator lessequal for signal <dinLibres_0$cmp_le0000> created at line 728.
+    Found 4-bit adder for signal <dinLibres_7_4$add0000> created at line 718.
+    Found 8-bit register for signal <dinPlayeras>.
+    Found 8-bit register for signal <dinRebotes>.
+    Found 8-bit comparator greatequal for signal <dinRebotes_0$cmp_ge0000> created at line 892.
+    Found 4-bit comparator greater for signal <dinRebotes_0$cmp_gt0000> created at line 880.
+    Found 8-bit comparator lessequal for signal <dinRebotes_0$cmp_le0000> created at line 892.
+    Found 4-bit adder for signal <dinRebotes_7_4$add0000> created at line 882.
+    Found 8-bit register for signal <dinTriples>.
+    Found 8-bit comparator greatequal for signal <dinTriples_0$cmp_ge0000> created at line 810.
+    Found 4-bit comparator greater for signal <dinTriples_0$cmp_gt0000> created at line 798.
+    Found 8-bit comparator lessequal for signal <dinTriples_0$cmp_le0000> created at line 810.
+    Found 4-bit adder for signal <dinTriples_7_4$add0000> created at line 800.
+    Found 1-bit register for signal <weAsist>.
+    Found 1-bit register for signal <weDobles>.
+    Found 1-bit register for signal <weFaltas>.
+    Found 1-bit register for signal <weLibres>.
+    Found 1-bit register for signal <wePlayeras>.
+    Found 1-bit register for signal <weRebotes>.
+    Found 1-bit register for signal <weTriples>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   3 Counter(s).
+	inferred 199 D-type flip-flop(s).
+	inferred  23 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+Unit <mainMaster> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 25
+ 25-bit adder                                          : 1
+ 30-bit adder                                          : 2
+ 4-bit adder                                           : 6
+ 5-bit adder                                           : 2
+ 8-bit adder                                           : 8
+ 8-bit subtractor                                      : 6
+# Counters                                             : 6
+ 10-bit up counter                                     : 2
+ 26-bit up counter                                     : 1
+ 29-bit up counter                                     : 1
+ 8-bit up counter                                      : 2
+# Registers                                            : 106
+ 1-bit register                                        : 84
+ 11-bit register                                       : 1
+ 12-bit register                                       : 1
+ 14-bit register                                       : 2
+ 25-bit register                                       : 1
+ 4-bit register                                        : 1
+ 5-bit register                                        : 7
+ 8-bit register                                        : 9
+# Latches                                              : 28
+ 1-bit latch                                           : 14
+ 30-bit latch                                          : 2
+ 8-bit latch                                           : 12
+# Comparators                                          : 34
+ 12-bit comparator greater                             : 1
+ 13-bit comparator greater                             : 1
+ 25-bit comparator lessequal                           : 1
+ 4-bit comparator greater                              : 6
+ 4-bit comparator less                                 : 1
+ 8-bit comparator greatequal                           : 6
+ 8-bit comparator greater                              : 6
+ 8-bit comparator less                                 : 6
+ 8-bit comparator lessequal                            : 6
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <anuncio> on signal <anuncio[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <puertoPC/stateTx> on signal <stateTx[1:4]> with sequential encoding.
+Optimizing FSM <puertoZB/stateTx> on signal <stateTx[1:4]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0010
+ 0010  | 0011
+ 0011  | 0100
+ 0100  | 0101
+ 0101  | 0110
+ 0110  | 0111
+ 0111  | 1000
+ 1000  | 1001
+ 1001  | 1010
+ 1010  | 1011
+ 1011  | 1100
+ 1100  | 1101
+ 1101  | 1110
+ 1110  | 1111
+ 1111  | 0001
+-------------------
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx92i.
+Reading core <eDobles.ngc>.
+Reading core <eLibres.ngc>.
+Reading core <eFaltas.ngc>.
+Reading core <eTriples.ngc>.
+Reading core <eRebotes.ngc>.
+Reading core <ePlayeras.ngc>.
+Reading core <eAsistencias.ngc>.
+Loading core <eDobles> for timing and area information for instance <estadDobles>.
+Loading core <eLibres> for timing and area information for instance <estadLibres>.
+Loading core <eFaltas> for timing and area information for instance <estadFaltas>.
+Loading core <eTriples> for timing and area information for instance <estadTriples>.
+Loading core <eRebotes> for timing and area information for instance <estadRebotes>.
+Loading core <ePlayeras> for timing and area information for instance <estadPlayers>.
+Loading core <eAsistencias> for timing and area information for instance <estadAsist>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 25
+ 25-bit adder                                          : 1
+ 30-bit adder                                          : 2
+ 4-bit adder                                           : 6
+ 5-bit adder                                           : 2
+ 8-bit adder                                           : 8
+ 8-bit subtractor                                      : 6
+# Counters                                             : 6
+ 10-bit up counter                                     : 2
+ 26-bit up counter                                     : 1
+ 29-bit up counter                                     : 1
+ 8-bit up counter                                      : 2
+# Registers                                            : 369
+ Flip-Flops                                            : 369
+# Latches                                              : 28
+ 1-bit latch                                           : 14
+ 30-bit latch                                          : 2
+ 8-bit latch                                           : 12
+# Comparators                                          : 34
+ 12-bit comparator greater                             : 1
+ 13-bit comparator greater                             : 1
+ 25-bit comparator lessequal                           : 1
+ 4-bit comparator greater                              : 6
+ 4-bit comparator less                                 : 1
+ 8-bit comparator greatequal                           : 6
+ 8-bit comparator greater                              : 6
+ 8-bit comparator less                                 : 6
+ 8-bit comparator lessequal                            : 6
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <clk_cont_9> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_10> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_11> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_12> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_13> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_14> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_15> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_16> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_17> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_18> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_19> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_20> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_21> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_22> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_23> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_24> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_25> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_26> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_27> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <clk_cont_28> of sequential type is unconnected in block <Display>.
+WARNING:Xst:2677 - Node <contador_14> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <contador_15> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <contador_16> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <contador_17> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <contador_18> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <contador_19> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <contador_20> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <contador_21> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <contador_22> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <contador_23> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <contador_24> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <contador_25> of sequential type is unconnected in block <mainMaster>.
+
+Optimizing unit <mainMaster> ...
+
+Optimizing unit <Display> ...
+
+Optimizing unit <RegistroPanel> ...
+
+Optimizing unit <Registro> ...
+
+Optimizing unit <kcuart_tx> ...
+
+Optimizing unit <bbfifo_16x8> ...
+
+Optimizing unit <kcuart_rx> ...
+
+Optimizing unit <serialComm> ...
+WARNING:Xst:2677 - Node <puertoZB/datoC1Rx_7> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC1Rx_6> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC1Rx_5> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC1Rx_4> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC1Rx_3> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC1Rx_2> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC1Rx_1> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC1Rx_0> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC2Rx_7> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC2Rx_6> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC2Rx_5> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC2Rx_4> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC2Rx_3> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC2Rx_2> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC2Rx_1> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC2Rx_0> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC3Rx_7> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC3Rx_6> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC3Rx_5> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC3Rx_4> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC3Rx_3> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC3Rx_2> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC3Rx_1> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC3Rx_0> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC4Rx_7> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC4Rx_6> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC4Rx_5> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC4Rx_4> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC4Rx_3> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC4Rx_2> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC4Rx_1> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoC4Rx_0> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoIdRx_7> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoIdRx_6> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoIdRx_5> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoIdRx_4> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoIdRx_3> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoIdRx_2> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoIdRx_1> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/datoIdRx_0> of sequential type is unconnected in block <mainMaster>.
+WARNING:Xst:2677 - Node <puertoZB/setNewValueRx> of sequential type is unconnected in block <mainMaster>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mainMaster, actual ratio is 42.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 428
+ Flip-Flops                                            : 428
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : mainMaster.ngr
+Top Level Output File Name         : mainMaster
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 66
+
+Cell Usage :
+# BELS                             : 1859
+#      GND                         : 8
+#      INV                         : 18
+#      LUT1                        : 135
+#      LUT2                        : 106
+#      LUT2_D                      : 1
+#      LUT2_L                      : 12
+#      LUT3                        : 276
+#      LUT3_D                      : 2
+#      LUT3_L                      : 13
+#      LUT4                        : 708
+#      LUT4_D                      : 51
+#      LUT4_L                      : 44
+#      MULT_AND                    : 6
+#      MUXCY                       : 189
+#      MUXF5                       : 123
+#      MUXF6                       : 2
+#      VCC                         : 8
+#      XORCY                       : 157
+# FlipFlops/Latches                : 557
+#      FD                          : 68
+#      FDE                         : 283
+#      FDR                         : 30
+#      FDRE                        : 22
+#      FDRS                        : 2
+#      FDS                         : 9
+#      FDSE                        : 14
+#      LD                          : 129
+# RAMS                             : 7
+#      RAMB16_S9                   : 7
+# Shift Registers                  : 72
+#      SRL16E                      : 72
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 44
+#      IBUF                        : 22
+#      OBUF                        : 22
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-5 
+
+ Number of Slices:                     770  out of   1920    40%  
+ Number of Slice Flip Flops:           551  out of   3840    14%  
+ Number of 4 input LUTs:              1438  out of   3840    37%  
+    Number used as logic:             1366
+    Number used as Shift registers:     72
+ Number of IOs:                         66
+ Number of bonded IOBs:                 45  out of    173    26%  
+    IOB Flip Flops:                      6
+ Number of BRAMs:                        7  out of     12    58%  
+ Number of GCLKs:                        3  out of      8    37%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------+---------------------------------+-------+
+Clock Signal                                                     | Clock buffer(FF name)           | Load  |
+-----------------------------------------------------------------+---------------------------------+-------+
+CLK                                                              | BUFGP                           | 470   |
+contador_13                                                      | NONE(cualquieraJugador/Q1)      | 15    |
+OS_play(oneShotPlay/Q4:O)                                        | NONE(*)(playPause/t)            | 1     |
+teclasOK(tecladoPRESSED/Q4:O)                                    | NONE(*)(modoError/t)            | 1     |
+clk25MHz/CLK1                                                    | NONE(disp/clk_cont_1)           | 9     |
+disp/clk_cont_8                                                  | NONE(disp/pstate_1)             | 4     |
+puertoZB/esperate_or00001(puertoZB/esperate_or00001:O)           | BUFG(*)(puertoZB/esperate_1)    | 30    |
+puertoZB/datoTx_or0000(puertoZB/datoTx_or00001:O)                | NONE(*)(puertoZB/datoTx_1)      | 8     |
+puertoZB/stateRx_1                                               | NONE(puertoZB/ledprueba1)       | 1     |
+puertoZB/stateRx_3                                               | NONE(puertoZB/ledprueba2)       | 1     |
+puertoZB/stateRx_13                                              | NONE(puertoZB/ledprueba3)       | 1     |
+puertoZB/queElOtroMande_or0000(puertoZB/queElOtroMande_or00001:O)| NONE(*)(puertoZB/queElOtroMande)| 1     |
+puertoZB/wbufferTx_or0000(puertoZB/wbufferTx_or00001:O)          | NONE(*)(puertoZB/wbufferTx)     | 1     |
+puertoZB/bufferReadyRx                                           | NONE(puertoZB/rbufferRx_mux0001)| 1     |
+puertoPC/esperate_or00001(puertoPC/esperate_or00001:O)           | BUFG(*)(puertoPC/esperate_27)   | 30    |
+puertoPC/stateRx_5                                               | NONE(puertoPC/datoC1Rx_3)       | 8     |
+puertoPC/stateRx_7                                               | NONE(puertoPC/datoC2Rx_5)       | 8     |
+puertoPC/stateRx_9                                               | NONE(puertoPC/datoC3Rx_1)       | 8     |
+puertoPC/stateRx_11                                              | NONE(puertoPC/datoC4Rx_5)       | 8     |
+puertoPC/stateRx_3                                               | NONE(puertoPC/datoIdRx_4)       | 9     |
+puertoPC/datoTx_or0000(puertoPC/datoTx_or00001:O)                | NONE(*)(puertoPC/datoTx_7)      | 8     |
+puertoPC/stateRx_1                                               | NONE(puertoPC/ledprueba1)       | 1     |
+puertoPC/stateRx_13                                              | NONE(puertoPC/ledprueba3)       | 1     |
+puertoPC/queElOtroMande_or0000(puertoPC/queElOtroMande_or00001:O)| NONE(*)(puertoPC/queElOtroMande)| 1     |
+puertoPC/wbufferTx_or0000(puertoPC/wbufferTx_or00001:O)          | NONE(*)(puertoPC/wbufferTx)     | 1     |
+puertoPC/setNewValueRx_not0001(puertoPC/setNewValueRx_not00011:O)| NONE(*)(puertoPC/setNewValueRx) | 1     |
+puertoPC/bufferReadyRx                                           | NONE(puertoPC/rbufferRx_mux0001)| 1     |
+-----------------------------------------------------------------+---------------------------------+-------+
+(*) These 11 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 12.418ns (Maximum Frequency: 80.531MHz)
+   Minimum input arrival time before clock: 9.057ns
+   Maximum output required time after clock: 26.274ns
+   Maximum combinational path delay: 18.057ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 12.418ns (frequency: 80.531MHz)
+  Total number of paths / destination ports: 47847 / 844
+-------------------------------------------------------------------------
+Delay:               12.418ns (Levels of Logic = 8)
+  Source:            estadisticaPanel/R_4 (FF)
+  Destination:       datoC4TxZB_5 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: estadisticaPanel/R_4 to datoC4TxZB_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              9   0.626   1.250  estadisticaPanel/R_4 (estadisticaPanel/R_4)
+     LUT3:I0->O            1   0.479   0.740  estadisticaPanel/Pout1<3>41 (estadisticaPanel/Pout1<3>_map20)
+     LUT4:I2->O            2   0.479   0.804  estadisticaPanel/Pout1<3>54 (estadisticaPanel/Pout1<3>_map22)
+     LUT4_D:I2->O          3   0.479   1.066  estadisticaPanel/Pout1<3>116_1 (estadisticaPanel/Pout1<3>116)
+     LUT4_D:I0->O         11   0.479   0.995  datoC4TxZB_0_cmp_eq00081 (datoC4TxZB_0_cmp_eq0008)
+     LUT4:I3->O            1   0.479   0.976  datoC4TxZB_5_mux0006193 (datoC4TxZB_5_mux0006_map48)
+     LUT4:I0->O            1   0.479   0.976  datoC4TxZB_5_mux0006206 (datoC4TxZB_5_mux0006_map50)
+     LUT4:I0->O            1   0.479   0.976  datoC4TxZB_5_mux0006231 (datoC4TxZB_5_mux0006_map53)
+     LUT4:I0->O            1   0.479   0.000  datoC4TxZB_5_mux0006267 (datoC4TxZB_5_mux0006)
+     FDE:D                     0.176          datoC4TxZB_5
+    ----------------------------------------
+    Total                     12.418ns (4.634ns logic, 7.784ns route)
+                                       (37.3% logic, 62.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'contador_13'
+  Clock period: 3.718ns (frequency: 268.940MHz)
+  Total number of paths / destination ports: 14 / 11
+-------------------------------------------------------------------------
+Delay:               3.718ns (Levels of Logic = 1)
+  Source:            aux1 (FF)
+  Destination:       algoPUSHED3 (FF)
+  Source Clock:      contador_13 rising
+  Destination Clock: contador_13 rising
+
+  Data Path: aux1 to algoPUSHED3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.626   1.040  aux1 (aux1)
+     LUT2:I0->O            1   0.479   0.681  algoPUSHED3_not00001 (algoPUSHED3_not0000)
+     FDR:R                     0.892          algoPUSHED3
+    ----------------------------------------
+    Total                      3.718ns (1.997ns logic, 1.721ns route)
+                                       (53.7% logic, 46.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OS_play'
+  Clock period: 2.741ns (frequency: 364.790MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.741ns (Levels of Logic = 1)
+  Source:            playPause/t (FF)
+  Destination:       playPause/t (FF)
+  Source Clock:      OS_play rising
+  Destination Clock: OS_play rising
+
+  Data Path: playPause/t to playPause/t
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.626   0.779  playPause/t (playPause/t)
+     INV:I->O              1   0.479   0.681  playPause/t_not00011_INV_0 (playPause/t_not0001)
+     FDE:D                     0.176          playPause/t
+    ----------------------------------------
+    Total                      2.741ns (1.281ns logic, 1.460ns route)
+                                       (46.7% logic, 53.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'teclasOK'
+  Clock period: 2.707ns (frequency: 369.372MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.707ns (Levels of Logic = 1)
+  Source:            modoError/t (FF)
+  Destination:       modoError/t (FF)
+  Source Clock:      teclasOK rising
+  Destination Clock: teclasOK rising
+
+  Data Path: modoError/t to modoError/t
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.626   0.745  modoError/t (modoError/t)
+     INV:I->O              1   0.479   0.681  modoError/t_not00011_INV_0 (modoError/t_not0001)
+     FDE:D                     0.176          modoError/t
+    ----------------------------------------
+    Total                      2.707ns (1.281ns logic, 1.426ns route)
+                                       (47.3% logic, 52.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk25MHz/CLK1'
+  Clock period: 3.811ns (frequency: 262.409MHz)
+  Total number of paths / destination ports: 45 / 9
+-------------------------------------------------------------------------
+Delay:               3.811ns (Levels of Logic = 9)
+  Source:            disp/clk_cont_1 (FF)
+  Destination:       disp/clk_cont_8 (FF)
+  Source Clock:      clk25MHz/CLK1 rising
+  Destination Clock: clk25MHz/CLK1 rising
+
+  Data Path: disp/clk_cont_1 to disp/clk_cont_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.626   0.976  disp/clk_cont_1 (disp/clk_cont_1)
+     LUT1:I0->O            1   0.479   0.000  disp/Mcount_clk_cont_cy<1>_rt (disp/Mcount_clk_cont_cy<1>_rt)
+     MUXCY:S->O            1   0.435   0.000  disp/Mcount_clk_cont_cy<1> (disp/Mcount_clk_cont_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  disp/Mcount_clk_cont_cy<2> (disp/Mcount_clk_cont_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  disp/Mcount_clk_cont_cy<3> (disp/Mcount_clk_cont_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  disp/Mcount_clk_cont_cy<4> (disp/Mcount_clk_cont_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  disp/Mcount_clk_cont_cy<5> (disp/Mcount_clk_cont_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  disp/Mcount_clk_cont_cy<6> (disp/Mcount_clk_cont_cy<6>)
+     MUXCY:CI->O           0   0.056   0.000  disp/Mcount_clk_cont_cy<7> (disp/Mcount_clk_cont_cy<7>)
+     XORCY:CI->O           1   0.786   0.000  disp/Mcount_clk_cont_xor<8> (disp/Result<8>)
+     FD:D                      0.176          disp/clk_cont_8
+    ----------------------------------------
+    Total                      3.811ns (2.835ns logic, 0.976ns route)
+                                       (74.4% logic, 25.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'disp/clk_cont_8'
+  Clock period: 2.585ns (frequency: 386.855MHz)
+  Total number of paths / destination ports: 16 / 6
+-------------------------------------------------------------------------
+Delay:               2.585ns (Levels of Logic = 1)
+  Source:            disp/pstate_2 (FF)
+  Destination:       disp/pstate_3 (FF)
+  Source Clock:      disp/clk_cont_8 rising
+  Destination Clock: disp/clk_cont_8 rising
+
+  Data Path: disp/pstate_2 to disp/pstate_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             14   0.626   1.304  disp/pstate_2 (disp/pstate_2)
+     LUT4:I0->O            2   0.479   0.000  disp/D7_7_cmp_eq00001 (disp/nstate<3>)
+     FD:D                      0.176          disp/pstate_3
+    ----------------------------------------
+    Total                      2.585ns (1.281ns logic, 1.304ns route)
+                                       (49.6% logic, 50.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'puertoZB/esperate_or00001'
+  Clock period: 6.185ns (frequency: 161.687MHz)
+  Total number of paths / destination ports: 1365 / 30
+-------------------------------------------------------------------------
+Delay:               6.185ns (Levels of Logic = 31)
+  Source:            puertoZB/esperate_1 (LATCH)
+  Destination:       puertoZB/esperate_29 (LATCH)
+  Source Clock:      puertoZB/esperate_or00001 falling
+  Destination Clock: puertoZB/esperate_or00001 falling
+
+  Data Path: puertoZB/esperate_1 to puertoZB/esperate_29
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.551   1.040  puertoZB/esperate_1 (puertoZB/esperate_1)
+     LUT1:I0->O            1   0.479   0.000  puertoZB/Madd_esperate_addsub0000_cy<1>_rt (puertoZB/Madd_esperate_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.435   0.000  puertoZB/Madd_esperate_addsub0000_cy<1> (puertoZB/Madd_esperate_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<2> (puertoZB/Madd_esperate_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<3> (puertoZB/Madd_esperate_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<4> (puertoZB/Madd_esperate_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<5> (puertoZB/Madd_esperate_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<6> (puertoZB/Madd_esperate_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<7> (puertoZB/Madd_esperate_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<8> (puertoZB/Madd_esperate_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<9> (puertoZB/Madd_esperate_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<10> (puertoZB/Madd_esperate_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<11> (puertoZB/Madd_esperate_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<12> (puertoZB/Madd_esperate_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<13> (puertoZB/Madd_esperate_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<14> (puertoZB/Madd_esperate_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<15> (puertoZB/Madd_esperate_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<16> (puertoZB/Madd_esperate_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<17> (puertoZB/Madd_esperate_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<18> (puertoZB/Madd_esperate_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<19> (puertoZB/Madd_esperate_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<20> (puertoZB/Madd_esperate_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<21> (puertoZB/Madd_esperate_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<22> (puertoZB/Madd_esperate_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<23> (puertoZB/Madd_esperate_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<24> (puertoZB/Madd_esperate_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<25> (puertoZB/Madd_esperate_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<26> (puertoZB/Madd_esperate_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<27> (puertoZB/Madd_esperate_addsub0000_cy<27>)
+     MUXCY:CI->O           0   0.056   0.000  puertoZB/Madd_esperate_addsub0000_cy<28> (puertoZB/Madd_esperate_addsub0000_cy<28>)
+     XORCY:CI->O           1   0.786   0.740  puertoZB/Madd_esperate_addsub0000_xor<29> (puertoZB/esperate_addsub0000<29>)
+     LUT3:I2->O            1   0.479   0.000  puertoZB/esperate_mux0000<29>1 (puertoZB/esperate_mux0000<29>)
+     LD:D                      0.176          puertoZB/esperate_29
+    ----------------------------------------
+    Total                      6.185ns (4.405ns logic, 1.780ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'puertoPC/esperate_or00001'
+  Clock period: 6.185ns (frequency: 161.687MHz)
+  Total number of paths / destination ports: 1365 / 30
+-------------------------------------------------------------------------
+Delay:               6.185ns (Levels of Logic = 31)
+  Source:            puertoPC/esperate_1 (LATCH)
+  Destination:       puertoPC/esperate_29 (LATCH)
+  Source Clock:      puertoPC/esperate_or00001 falling
+  Destination Clock: puertoPC/esperate_or00001 falling
+
+  Data Path: puertoPC/esperate_1 to puertoPC/esperate_29
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.551   1.040  puertoPC/esperate_1 (puertoPC/esperate_1)
+     LUT1:I0->O            1   0.479   0.000  puertoPC/Madd_esperate_addsub0000_cy<1>_rt (puertoPC/Madd_esperate_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.435   0.000  puertoPC/Madd_esperate_addsub0000_cy<1> (puertoPC/Madd_esperate_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<2> (puertoPC/Madd_esperate_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<3> (puertoPC/Madd_esperate_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<4> (puertoPC/Madd_esperate_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<5> (puertoPC/Madd_esperate_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<6> (puertoPC/Madd_esperate_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<7> (puertoPC/Madd_esperate_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<8> (puertoPC/Madd_esperate_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<9> (puertoPC/Madd_esperate_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<10> (puertoPC/Madd_esperate_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<11> (puertoPC/Madd_esperate_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<12> (puertoPC/Madd_esperate_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<13> (puertoPC/Madd_esperate_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<14> (puertoPC/Madd_esperate_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<15> (puertoPC/Madd_esperate_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<16> (puertoPC/Madd_esperate_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<17> (puertoPC/Madd_esperate_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<18> (puertoPC/Madd_esperate_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<19> (puertoPC/Madd_esperate_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<20> (puertoPC/Madd_esperate_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<21> (puertoPC/Madd_esperate_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<22> (puertoPC/Madd_esperate_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<23> (puertoPC/Madd_esperate_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<24> (puertoPC/Madd_esperate_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<25> (puertoPC/Madd_esperate_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<26> (puertoPC/Madd_esperate_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<27> (puertoPC/Madd_esperate_addsub0000_cy<27>)
+     MUXCY:CI->O           0   0.056   0.000  puertoPC/Madd_esperate_addsub0000_cy<28> (puertoPC/Madd_esperate_addsub0000_cy<28>)
+     XORCY:CI->O           1   0.786   0.740  puertoPC/Madd_esperate_addsub0000_xor<29> (puertoPC/esperate_addsub0000<29>)
+     LUT3:I2->O            1   0.479   0.000  puertoPC/esperate_mux0000<29>1 (puertoPC/esperate_mux0000<29>)
+     LD:D                      0.176          puertoPC/esperate_29
+    ----------------------------------------
+    Total                      6.185ns (4.405ns logic, 1.780ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 909 / 209
+-------------------------------------------------------------------------
+Offset:              9.057ns (Levels of Logic = 7)
+  Source:            bError (PAD)
+  Destination:       datoC4TxZB_4 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: bError to datoC4TxZB_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            66   0.715   2.036  bError_IBUF (bError_IBUF)
+     LUT4:I0->O            4   0.479   0.802  datoC4TxZB_0_cmp_eq00141_SW0 (N6545)
+     LUT4:I3->O            1   0.479   0.704  datoC4TxZB_4_mux00062 (datoC4TxZB_4_mux0006_map2)
+     LUT4:I3->O            1   0.479   0.851  datoC4TxZB_4_mux00061011 (datoC4TxZB_4_mux0006_map24)
+     LUT3:I1->O            1   0.479   0.740  datoC4TxZB_4_mux00061351 (datoC4TxZB_4_mux0006_map32)
+     LUT3_L:I2->LO         1   0.479   0.159  datoC4TxZB_4_mux0006256_SW0 (N6651)
+     LUT4:I2->O            1   0.479   0.000  datoC4TxZB_4_mux0006281 (datoC4TxZB_4_mux0006)
+     FDE:D                     0.176          datoC4TxZB_4
+    ----------------------------------------
+    Total                      9.057ns (3.765ns logic, 5.292ns route)
+                                       (41.6% logic, 58.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'contador_13'
+  Total number of paths / destination ports: 92 / 5
+-------------------------------------------------------------------------
+Offset:              6.909ns (Levels of Logic = 6)
+  Source:            i2 (PAD)
+  Destination:       cualquieraPanel/Q1 (FF)
+  Destination Clock: contador_13 rising
+
+  Data Path: i2 to cualquieraPanel/Q1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            31   0.715   1.865  i2_IBUF (i2_IBUF)
+     LUT4:I0->O            2   0.479   1.040  bpanel_4_mux00001 (bpanel<4>)
+     LUT4:I0->O            1   0.479   0.000  Mcompar_algunBotonPanel_cmp_gt0000_lut<1> (N34)
+     MUXCY:S->O            1   0.435   0.000  Mcompar_algunBotonPanel_cmp_gt0000_cy<1> (Mcompar_algunBotonPanel_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.265   0.976  Mcompar_algunBotonPanel_cmp_gt0000_cy<2> (Mcompar_algunBotonPanel_cmp_gt0000_cy<2>)
+     LUT4:I0->O           12   0.479   0.000  algunBotonPanel_or00001 (algunBotonPanel)
+     FD:D                      0.176          cualquieraPanel/Q1
+    ----------------------------------------
+    Total                      6.909ns (3.028ns logic, 3.882ns route)
+                                       (43.8% logic, 56.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 34564 / 10
+-------------------------------------------------------------------------
+Offset:              22.854ns (Levels of Logic = 15)
+  Source:            weFaltas (FF)
+  Destination:       salBCD<5> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: weFaltas to salBCD<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              3   0.626   0.941  weFaltas (weFaltas)
+     LUT2:I1->O            9   0.479   0.978  datoC4TxPC_and00031 (datoC4TxPC_and0003)
+     LUT4:I3->O            1   0.479   0.851  datoC4TxPC<0>11_SW0 (N186)
+     LUT4:I1->O            8   0.479   1.091  datoC4TxPC<0>11 (N54)
+     LUT4:I1->O            1   0.479   0.976  datoC4TxPC<0>9 (datoC4TxPC<0>_map5)
+     LUT4:I0->O            1   0.479   0.704  datoC4TxPC<0>38_SW0 (N6784)
+     LUT4:I3->O            1   0.479   0.851  datoC4TxPC<0>38 (datoC4TxPC<0>_map14)
+     LUT2:I1->O            2   0.479   0.804  datoC4TxPC<0>48 (datoC4TxPC<0>)
+     LUT4:I2->O            1   0.479   0.000  disp/Dmix<0>3062 (N7011)
+     MUXF5:I0->O           2   0.314   1.040  disp/Dmix<0>306_f5 (disp/Dmix<0>_map67)
+     LUT3:I0->O            1   0.479   0.000  disp/Dmix<0>3342 (N7080)
+     MUXF5:I0->O           8   0.314   1.216  disp/Dmix<0>334_f5 (disp/Dmix<0>)
+     LUT4:I0->O            1   0.479   0.976  disp/Mrom_Dmix_rom00002_SW0 (N172)
+     LUT4:I0->O            1   0.479   0.000  disp/Mrom_Dmix_rom00002_G (N6899)
+     MUXF5:I1->O           1   0.314   0.681  disp/Mrom_Dmix_rom00002 (salBCD_5_OBUF)
+     OBUF:I->O                 4.909          salBCD_5_OBUF (salBCD<5>)
+    ----------------------------------------
+    Total                     22.854ns (11.746ns logic, 11.108ns route)
+                                       (51.4% logic, 48.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'puertoPC/stateRx_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            puertoPC/ledprueba1 (LATCH)
+  Destination:       led1 (PAD)
+  Source Clock:      puertoPC/stateRx_1 falling
+
+  Data Path: puertoPC/ledprueba1 to led1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.551   0.681  puertoPC/ledprueba1 (puertoPC/ledprueba1)
+     OBUF:I->O                 4.909          led1_OBUF (led1)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'puertoPC/stateRx_3'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            puertoPC/ledprueba2 (LATCH)
+  Destination:       led2 (PAD)
+  Source Clock:      puertoPC/stateRx_3 falling
+
+  Data Path: puertoPC/ledprueba2 to led2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.551   0.681  puertoPC/ledprueba2 (puertoPC/ledprueba2)
+     OBUF:I->O                 4.909          led2_OBUF (led2)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'puertoPC/stateRx_13'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            puertoPC/ledprueba3 (LATCH)
+  Destination:       led3 (PAD)
+  Source Clock:      puertoPC/stateRx_13 falling
+
+  Data Path: puertoPC/ledprueba3 to led3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.551   0.681  puertoPC/ledprueba3 (puertoPC/ledprueba3)
+     OBUF:I->O                 4.909          led3_OBUF (led3)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'puertoZB/stateRx_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            puertoZB/ledprueba1 (LATCH)
+  Destination:       led4 (PAD)
+  Source Clock:      puertoZB/stateRx_1 falling
+
+  Data Path: puertoZB/ledprueba1 to led4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.551   0.681  puertoZB/ledprueba1 (puertoZB/ledprueba1)
+     OBUF:I->O                 4.909          led4_OBUF (led4)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'puertoZB/stateRx_3'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            puertoZB/ledprueba2 (LATCH)
+  Destination:       led5 (PAD)
+  Source Clock:      puertoZB/stateRx_3 falling
+
+  Data Path: puertoZB/ledprueba2 to led5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.551   0.681  puertoZB/ledprueba2 (puertoZB/ledprueba2)
+     OBUF:I->O                 4.909          led5_OBUF (led5)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'puertoZB/stateRx_13'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            puertoZB/ledprueba3 (LATCH)
+  Destination:       led6 (PAD)
+  Source Clock:      puertoZB/stateRx_13 falling
+
+  Data Path: puertoZB/ledprueba3 to led6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.551   0.681  puertoZB/ledprueba3 (puertoZB/ledprueba3)
+     OBUF:I->O                 4.909          led6_OBUF (led6)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'OS_play'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.314ns (Levels of Logic = 1)
+  Source:            playPause/t (FF)
+  Destination:       led7 (PAD)
+  Source Clock:      OS_play rising
+
+  Data Path: playPause/t to led7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.626   0.779  playPause/t (playPause/t)
+     OBUF:I->O                 4.909          led7_OBUF (led7)
+    ----------------------------------------
+    Total                      6.314ns (5.535ns logic, 0.779ns route)
+                                       (87.7% logic, 12.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'teclasOK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            modoError/t (FF)
+  Destination:       led8 (PAD)
+  Source Clock:      teclasOK rising
+
+  Data Path: modoError/t to led8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.626   0.745  modoError/t (modoError/t)
+     OBUF:I->O                 4.909          led8_OBUF (led8)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'disp/clk_cont_8'
+  Total number of paths / destination ports: 726 / 12
+-------------------------------------------------------------------------
+Offset:              15.152ns (Levels of Logic = 9)
+  Source:            disp/pstate_0 (FF)
+  Destination:       salBCD<5> (PAD)
+  Source Clock:      disp/clk_cont_8 rising
+
+  Data Path: disp/pstate_0 to salBCD<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             13   0.626   1.290  disp/pstate_0 (disp/pstate_0)
+     LUT4:I0->O            5   0.479   1.078  disp/Dmix_cmp_eq00001 (disp/nstate<1>)
+     LUT4:I0->O            1   0.479   0.000  disp/Dmix<0>3061 (N7010)
+     MUXF5:I1->O           2   0.314   1.040  disp/Dmix<0>306_f5 (disp/Dmix<0>_map67)
+     LUT3:I0->O            1   0.479   0.000  disp/Dmix<0>3342 (N7080)
+     MUXF5:I0->O           8   0.314   1.216  disp/Dmix<0>334_f5 (disp/Dmix<0>)
+     LUT4:I0->O            1   0.479   0.976  disp/Mrom_Dmix_rom00002_SW0 (N172)
+     LUT4:I0->O            1   0.479   0.000  disp/Mrom_Dmix_rom00002_G (N6899)
+     MUXF5:I1->O           1   0.314   0.681  disp/Mrom_Dmix_rom00002 (salBCD_5_OBUF)
+     OBUF:I->O                 4.909          salBCD_5_OBUF (salBCD<5>)
+    ----------------------------------------
+    Total                     15.152ns (8.872ns logic, 6.280ns route)
+                                       (58.6% logic, 41.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'puertoPC/stateRx_9'
+  Total number of paths / destination ports: 6052 / 8
+-------------------------------------------------------------------------
+Offset:              26.274ns (Levels of Logic = 18)
+  Source:            puertoPC/datoC3Rx_6 (LATCH)
+  Destination:       salBCD<5> (PAD)
+  Source Clock:      puertoPC/stateRx_9 falling
+
+  Data Path: puertoPC/datoC3Rx_6 to salBCD<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               3   0.551   1.066  puertoPC/datoC3Rx_6 (puertoPC/datoC3Rx_6)
+     LUT4:I0->O            1   0.479   0.000  datoC4TxPC_cmp_eq000011 (N6967)
+     MUXF5:I0->O          10   0.314   1.023  datoC4TxPC_cmp_eq00001_f5 (weRebotes_and0000)
+     LUT4:I2->O            4   0.479   1.074  datoC4TxPC_cmp_eq00031 (datoC4TxPC_cmp_eq0003)
+     LUT2:I0->O            9   0.479   0.978  datoC4TxPC_and00031 (datoC4TxPC_and0003)
+     LUT4:I3->O            1   0.479   0.851  datoC4TxPC<0>11_SW0 (N186)
+     LUT4:I1->O            8   0.479   1.091  datoC4TxPC<0>11 (N54)
+     LUT4:I1->O            1   0.479   0.976  datoC4TxPC<0>9 (datoC4TxPC<0>_map5)
+     LUT4:I0->O            1   0.479   0.704  datoC4TxPC<0>38_SW0 (N6784)
+     LUT4:I3->O            1   0.479   0.851  datoC4TxPC<0>38 (datoC4TxPC<0>_map14)
+     LUT2:I1->O            2   0.479   0.804  datoC4TxPC<0>48 (datoC4TxPC<0>)
+     LUT4:I2->O            1   0.479   0.000  disp/Dmix<0>3062 (N7011)
+     MUXF5:I0->O           2   0.314   1.040  disp/Dmix<0>306_f5 (disp/Dmix<0>_map67)
+     LUT3:I0->O            1   0.479   0.000  disp/Dmix<0>3342 (N7080)
+     MUXF5:I0->O           8   0.314   1.216  disp/Dmix<0>334_f5 (disp/Dmix<0>)
+     LUT4:I0->O            1   0.479   0.976  disp/Mrom_Dmix_rom00002_SW0 (N172)
+     LUT4:I0->O            1   0.479   0.000  disp/Mrom_Dmix_rom00002_G (N6899)
+     MUXF5:I1->O           1   0.314   0.681  disp/Mrom_Dmix_rom00002 (salBCD_5_OBUF)
+     OBUF:I->O                 4.909          salBCD_5_OBUF (salBCD<5>)
+    ----------------------------------------
+    Total                     26.274ns (12.943ns logic, 13.331ns route)
+                                       (49.3% logic, 50.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'puertoPC/stateRx_11'
+  Total number of paths / destination ports: 50 / 8
+-------------------------------------------------------------------------
+Offset:              13.300ns (Levels of Logic = 8)
+  Source:            puertoPC/datoC4Rx_0 (LATCH)
+  Destination:       salBCD<5> (PAD)
+  Source Clock:      puertoPC/stateRx_11 falling
+
+  Data Path: puertoPC/datoC4Rx_0 to salBCD<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              15   0.551   1.069  puertoPC/datoC4Rx_0 (puertoPC/datoC4Rx_0)
+     LUT4:I2->O            1   0.479   0.000  disp/Dmix<0>3061 (N7010)
+     MUXF5:I1->O           2   0.314   1.040  disp/Dmix<0>306_f5 (disp/Dmix<0>_map67)
+     LUT3:I0->O            1   0.479   0.000  disp/Dmix<0>3342 (N7080)
+     MUXF5:I0->O           8   0.314   1.216  disp/Dmix<0>334_f5 (disp/Dmix<0>)
+     LUT4:I0->O            1   0.479   0.976  disp/Mrom_Dmix_rom00002_SW0 (N172)
+     LUT4:I0->O            1   0.479   0.000  disp/Mrom_Dmix_rom00002_G (N6899)
+     MUXF5:I1->O           1   0.314   0.681  disp/Mrom_Dmix_rom00002 (salBCD_5_OBUF)
+     OBUF:I->O                 4.909          salBCD_5_OBUF (salBCD<5>)
+    ----------------------------------------
+    Total                     13.300ns (8.318ns logic, 4.982ns route)
+                                       (62.5% logic, 37.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'puertoPC/stateRx_5'
+  Total number of paths / destination ports: 50 / 8
+-------------------------------------------------------------------------
+Offset:              14.402ns (Levels of Logic = 9)
+  Source:            puertoPC/datoC1Rx_0 (LATCH)
+  Destination:       salBCD<5> (PAD)
+  Source Clock:      puertoPC/stateRx_5 falling
+
+  Data Path: puertoPC/datoC1Rx_0 to salBCD<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               5   0.551   0.953  puertoPC/datoC1Rx_0 (puertoPC/datoC1Rx_0)
+     LUT4:I1->O            1   0.479   0.000  disp/Dmix<0>1781 (N7007)
+     MUXF5:I1->O           1   0.314   0.976  disp/Dmix<0>178_f5 (disp/Dmix<0>_map44)
+     LUT4:I0->O            2   0.479   0.804  disp/Dmix<0>200 (disp/Dmix<0>_map46)
+     LUT4:I2->O            1   0.479   0.000  disp/Dmix<0>3341 (N7079)
+     MUXF5:I1->O           8   0.314   1.216  disp/Dmix<0>334_f5 (disp/Dmix<0>)
+     LUT4:I0->O            1   0.479   0.976  disp/Mrom_Dmix_rom00002_SW0 (N172)
+     LUT4:I0->O            1   0.479   0.000  disp/Mrom_Dmix_rom00002_G (N6899)
+     MUXF5:I1->O           1   0.314   0.681  disp/Mrom_Dmix_rom00002 (salBCD_5_OBUF)
+     OBUF:I->O                 4.909          salBCD_5_OBUF (salBCD<5>)
+    ----------------------------------------
+    Total                     14.402ns (8.797ns logic, 5.605ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'puertoPC/stateRx_7'
+  Total number of paths / destination ports: 34 / 8
+-------------------------------------------------------------------------
+Offset:              13.603ns (Levels of Logic = 8)
+  Source:            puertoPC/datoC2Rx_0 (LATCH)
+  Destination:       salBCD<5> (PAD)
+  Source Clock:      puertoPC/stateRx_7 falling
+
+  Data Path: puertoPC/datoC2Rx_0 to salBCD<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               4   0.551   0.802  puertoPC/datoC2Rx_0 (puertoPC/datoC2Rx_0)
+     LUT4:I3->O            1   0.479   0.704  disp/Dmix<0>82 (disp/Dmix<0>_map21)
+     LUT4:I3->O            1   0.479   0.000  disp/Dmix<0>334_SW0_F (N6892)
+     MUXF5:I0->O           1   0.314   0.681  disp/Dmix<0>334_SW0 (N6804)
+     MUXF5:S->O            8   0.540   1.216  disp/Dmix<0>334_f5 (disp/Dmix<0>)
+     LUT4:I0->O            1   0.479   0.976  disp/Mrom_Dmix_rom00002_SW0 (N172)
+     LUT4:I0->O            1   0.479   0.000  disp/Mrom_Dmix_rom00002_G (N6899)
+     MUXF5:I1->O           1   0.314   0.681  disp/Mrom_Dmix_rom00002 (salBCD_5_OBUF)
+     OBUF:I->O                 4.909          salBCD_5_OBUF (salBCD<5>)
+    ----------------------------------------
+    Total                     13.603ns (8.544ns logic, 5.059ns route)
+                                       (62.8% logic, 37.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2086 / 8
+-------------------------------------------------------------------------
+Delay:               18.057ns (Levels of Logic = 12)
+  Source:            iKB (PAD)
+  Destination:       salBCD<5> (PAD)
+
+  Data Path: iKB to salBCD<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   0.715   1.731  iKB_IBUF (iKB_IBUF)
+     LUT2:I1->O           22   0.479   1.655  disp4_and000011 (disp3_or0000)
+     LUT4:I0->O            1   0.479   0.000  disp/Dmix<3>1481 (N7012)
+     MUXF5:I1->O           2   0.314   0.768  disp/Dmix<3>148_f5 (disp/Dmix<3>_map34)
+     LUT4:I3->O            1   0.479   0.000  disp/Dmix<3>252_SW01 (N7049)
+     MUXF5:I1->O           1   0.314   0.704  disp/Dmix<3>252_SW0_f5 (N6726)
+     LUT4:I3->O            1   0.479   0.704  disp/Dmix<3>365_SW0 (N6832)
+     LUT4:I3->O            2   0.479   0.804  disp/Dmix<3>365 (disp/Dmix<3>_map74)
+     LUT3:I2->O            8   0.479   1.091  disp/Dmix<3>378 (disp/Dmix<3>)
+     LUT3:I1->O            1   0.479   0.000  disp/Mrom_Dmix_rom00002_F (N6898)
+     MUXF5:I0->O           1   0.314   0.681  disp/Mrom_Dmix_rom00002 (salBCD_5_OBUF)
+     OBUF:I->O                 4.909          salBCD_5_OBUF (salBCD<5>)
+    ----------------------------------------
+    Total                     18.057ns (9.919ns logic, 8.138ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+CPU : 49.20 / 49.48 s | Elapsed : 49.00 / 49.00 s
+ 
+--> 
+
+Total memory usage is 202860 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  151 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+

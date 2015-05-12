@@ -1,0 +1,5 @@
+iMasterCpruebaPC    - 	programa que simula la parte de LabView del proyecto.
+			Puede enviar cualquier tipo de paquete. Ya sea de comando NORMAL
+			o de comando REFRESH- en cuyo caso también recibe lo enviado por
+			el Spartan Maestro-.
+iMasterCpruebaSLAVE -	programa que recibe un paquete de maera serial

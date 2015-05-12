@@ -1,0 +1,7 @@
+# Output products list for <eLibres>
+eLibres.ngc
+eLibres.vhd
+eLibres.vho
+eLibres.xco
+eLibres_flist.txt
+eLibres_xmdf.tcl

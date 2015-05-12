@@ -1,0 +1,7 @@
+# Output products list for <eDobles>
+eDobles.ngc
+eDobles.vhd
+eDobles.vho
+eDobles.xco
+eDobles_flist.txt
+eDobles_xmdf.tcl

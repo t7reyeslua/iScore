@@ -1,0 +1,2 @@
+-la carpeta iScoreMaster contiene el proyecto completo en VHDL
+-creado en el sistema de desarrollo de Xilinx ISE 9.1

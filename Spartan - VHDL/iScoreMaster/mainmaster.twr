@@ -1,0 +1,196 @@
+--------------------------------------------------------------------------------
+Release 9.2.04i Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx92i\bin\nt\trce.exe -ise C:/Xilinx92i/iMasterBlock15/iMaster.ise
+-intstyle ise -e 3 -s 5 -xml mainMaster mainMaster.ncd -o mainMaster.twr
+mainMaster.pcf -ucf mainMaster.ucf
+
+Design file:              mainmaster.ncd
+Physical constraint file: mainmaster.pcf
+Device,package,speed:     xc3s200,ft256,-5 (PRODUCTION 1.39 2007-10-19)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK
+-------------+------------+------------+------------------+--------+
+             |  Setup to  |  Hold to   |                  | Clock  |
+Source       | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+-------------+------------+------------+------------------+--------+
+bEquipo      |    8.144(R)|    0.025(R)|CLK_BUFGP         |   0.000|
+bError       |    9.929(R)|   -0.413(R)|CLK_BUFGP         |   0.000|
+bReloj       |    9.292(R)|    0.517(R)|CLK_BUFGP         |   0.000|
+boton1       |   10.332(R)|    0.435(R)|CLK_BUFGP         |   0.000|
+boton2       |   10.016(R)|    0.581(R)|CLK_BUFGP         |   0.000|
+boton3       |    9.000(R)|    0.320(R)|CLK_BUFGP         |   0.000|
+boton4       |    8.477(R)|    0.374(R)|CLK_BUFGP         |   0.000|
+i2           |    9.497(R)|    0.852(R)|CLK_BUFGP         |   0.000|
+i3           |    8.993(R)|    0.477(R)|CLK_BUFGP         |   0.000|
+ioRxPC       |    2.623(R)|   -0.400(R)|CLK_BUFGP         |   0.000|
+ioRxZB       |    2.621(R)|   -0.399(R)|CLK_BUFGP         |   0.000|
+tecladoPIC<0>|    4.569(R)|   -0.112(R)|CLK_BUFGP         |   0.000|
+tecladoPIC<1>|    5.338(R)|   -0.614(R)|CLK_BUFGP         |   0.000|
+tecladoPIC<2>|    3.626(R)|   -1.237(R)|CLK_BUFGP         |   0.000|
+tecladoPIC<3>|    4.655(R)|   -0.047(R)|CLK_BUFGP         |   0.000|
+tecladoPIC<4>|    5.407(R)|   -0.113(R)|CLK_BUFGP         |   0.000|
+tecladoPIC<5>|    5.666(R)|   -1.715(R)|CLK_BUFGP         |   0.000|
+tecladoPIC<6>|    7.187(R)|   -1.039(R)|CLK_BUFGP         |   0.000|
+tecladoPIC<7>|    6.772(R)|   -1.308(R)|CLK_BUFGP         |   0.000|
+-------------+------------+------------+------------------+--------+
+
+Clock CLK to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+ioTxPC      |    6.404(R)|CLK_BUFGP         |   0.000|
+ioTxZB      |    6.405(R)|CLK_BUFGP         |   0.000|
+salBCD<0>   |   22.795(R)|CLK_BUFGP         |   0.000|
+salBCD<1>   |   22.435(R)|CLK_BUFGP         |   0.000|
+salBCD<2>   |   23.053(R)|CLK_BUFGP         |   0.000|
+salBCD<3>   |   23.127(R)|CLK_BUFGP         |   0.000|
+salBCD<4>   |   23.303(R)|CLK_BUFGP         |   0.000|
+salBCD<5>   |   22.479(R)|CLK_BUFGP         |   0.000|
+salBCD<6>   |   22.179(R)|CLK_BUFGP         |   0.000|
+salBCD<7>   |   23.204(R)|CLK_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |   11.612|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+i2             |salBCD<0>      |   15.810|
+i2             |salBCD<1>      |   16.217|
+i2             |salBCD<2>      |   16.085|
+i2             |salBCD<3>      |   16.098|
+i2             |salBCD<4>      |   15.574|
+i2             |salBCD<5>      |   16.688|
+i2             |salBCD<6>      |   16.022|
+i2             |salBCD<7>      |   15.823|
+iKB            |salBCD<0>      |   16.753|
+iKB            |salBCD<1>      |   16.790|
+iKB            |salBCD<2>      |   17.293|
+iKB            |salBCD<3>      |   17.380|
+iKB            |salBCD<4>      |   16.584|
+iKB            |salBCD<5>      |   18.010|
+iKB            |salBCD<6>      |   16.531|
+iKB            |salBCD<7>      |   16.332|
+iModo          |salBCD<0>      |   16.028|
+iModo          |salBCD<1>      |   16.435|
+iModo          |salBCD<2>      |   16.303|
+iModo          |salBCD<3>      |   16.318|
+iModo          |salBCD<4>      |   15.792|
+iModo          |salBCD<5>      |   16.948|
+iModo          |salBCD<6>      |   16.240|
+iModo          |salBCD<7>      |   16.041|
+iName          |salBCD<0>      |   16.390|
+iName          |salBCD<1>      |   16.699|
+iName          |salBCD<2>      |   16.930|
+iName          |salBCD<3>      |   17.017|
+iName          |salBCD<4>      |   16.221|
+iName          |salBCD<5>      |   17.647|
+iName          |salBCD<6>      |   16.504|
+iName          |salBCD<7>      |   16.305|
+tecladoPIC<0>  |salBCD<0>      |   15.049|
+tecladoPIC<0>  |salBCD<1>      |   14.827|
+tecladoPIC<0>  |salBCD<2>      |   15.589|
+tecladoPIC<0>  |salBCD<3>      |   15.676|
+tecladoPIC<0>  |salBCD<4>      |   14.880|
+tecladoPIC<0>  |salBCD<5>      |   16.306|
+tecladoPIC<0>  |salBCD<6>      |   14.645|
+tecladoPIC<1>  |salBCD<0>      |   14.121|
+tecladoPIC<1>  |salBCD<1>      |   14.828|
+tecladoPIC<1>  |salBCD<2>      |   14.396|
+tecladoPIC<1>  |salBCD<3>      |   14.404|
+tecladoPIC<1>  |salBCD<4>      |   14.481|
+tecladoPIC<1>  |salBCD<5>      |   14.743|
+tecladoPIC<1>  |salBCD<6>      |   14.567|
+tecladoPIC<1>  |salBCD<7>      |   14.060|
+tecladoPIC<2>  |salBCD<0>      |   15.013|
+tecladoPIC<2>  |salBCD<1>      |   14.653|
+tecladoPIC<2>  |salBCD<2>      |   15.271|
+tecladoPIC<2>  |salBCD<3>      |   15.345|
+tecladoPIC<2>  |salBCD<4>      |   15.521|
+tecladoPIC<2>  |salBCD<5>      |   14.504|
+tecladoPIC<2>  |salBCD<6>      |   14.397|
+tecladoPIC<2>  |salBCD<7>      |   15.422|
+tecladoPIC<3>  |salBCD<0>      |   12.806|
+tecladoPIC<3>  |salBCD<1>      |   13.213|
+tecladoPIC<3>  |salBCD<2>      |   13.081|
+tecladoPIC<3>  |salBCD<3>      |   13.094|
+tecladoPIC<3>  |salBCD<4>      |   12.434|
+tecladoPIC<3>  |salBCD<5>      |   13.511|
+tecladoPIC<3>  |salBCD<6>      |   13.018|
+tecladoPIC<3>  |salBCD<7>      |   12.819|
+tecladoPIC<4>  |salBCD<0>      |   15.272|
+tecladoPIC<4>  |salBCD<1>      |   15.050|
+tecladoPIC<4>  |salBCD<2>      |   15.812|
+tecladoPIC<4>  |salBCD<3>      |   15.899|
+tecladoPIC<4>  |salBCD<4>      |   15.103|
+tecladoPIC<4>  |salBCD<5>      |   16.529|
+tecladoPIC<4>  |salBCD<6>      |   14.868|
+tecladoPIC<5>  |salBCD<0>      |   15.953|
+tecladoPIC<5>  |salBCD<1>      |   16.660|
+tecladoPIC<5>  |salBCD<2>      |   16.228|
+tecladoPIC<5>  |salBCD<3>      |   16.236|
+tecladoPIC<5>  |salBCD<4>      |   16.313|
+tecladoPIC<5>  |salBCD<5>      |   16.575|
+tecladoPIC<5>  |salBCD<6>      |   16.399|
+tecladoPIC<5>  |salBCD<7>      |   15.892|
+tecladoPIC<6>  |salBCD<0>      |   14.664|
+tecladoPIC<6>  |salBCD<1>      |   14.304|
+tecladoPIC<6>  |salBCD<2>      |   14.922|
+tecladoPIC<6>  |salBCD<3>      |   14.996|
+tecladoPIC<6>  |salBCD<4>      |   15.172|
+tecladoPIC<6>  |salBCD<5>      |   14.155|
+tecladoPIC<6>  |salBCD<6>      |   14.048|
+tecladoPIC<6>  |salBCD<7>      |   15.073|
+tecladoPIC<7>  |salBCD<0>      |   14.056|
+tecladoPIC<7>  |salBCD<1>      |   14.463|
+tecladoPIC<7>  |salBCD<2>      |   14.331|
+tecladoPIC<7>  |salBCD<3>      |   14.344|
+tecladoPIC<7>  |salBCD<4>      |   13.684|
+tecladoPIC<7>  |salBCD<5>      |   14.761|
+tecladoPIC<7>  |salBCD<6>      |   14.268|
+tecladoPIC<7>  |salBCD<7>      |   14.069|
+---------------+---------------+---------+
+
+
+Analysis completed Tue May 12 08:32:07 2009 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 96 MB
+
+
+

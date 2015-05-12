@@ -1,0 +1,7 @@
+# Output products list for <eAsistencias>
+eAsistencias.ngc
+eAsistencias.vhd
+eAsistencias.vho
+eAsistencias.xco
+eAsistencias_flist.txt
+eAsistencias_xmdf.tcl

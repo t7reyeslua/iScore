@@ -1,0 +1,7 @@
+# Output products list for <eTriples>
+eTriples.ngc
+eTriples.vhd
+eTriples.vho
+eTriples.xco
+eTriples_flist.txt
+eTriples_xmdf.tcl
